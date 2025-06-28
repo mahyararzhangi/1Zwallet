@@ -1,30 +1,25 @@
 import "./App.css";
-import CustomIcon from "../../icons/CustomIcon";
+import HomePage from "../../Pages/HomePage";
+import DownloadPage from "../../Pages/DownloadPage";
+// import CustomIcon from "../../icons/CustomIcon";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Menu } from "../Menu/Menu";
+import Footer from "../Footer/Footer";
 
 function App() {
   return (
     <>
-      <div></div>
-      <h1>1Z Wallet</h1>
-      <div>
-        <CustomIcon name="siteLogo" size={50} color="blue" />
-      </div>
-      <div className="card">
-        <CustomIcon name="bitfinex" size={100} color="blue" />
-        <CustomIcon name="monero" size={100} color="blue" />
-        <CustomIcon name="tether" size={100} color="blue" />
-        <CustomIcon name="steemit" size={100} color="blue" />
-        <CustomIcon name="binance" size={100} color="blue" />
-        <CustomIcon name="ripple" size={100} color="blue" />
-        <CustomIcon name="coinbase" size={100} color="blue" />
-        <CustomIcon name="bitcoin" size={100} color="blue" />
-        <CustomIcon name="android" size={100} color="blue" />
-      </div>
-      <div>
-        <CustomIcon name="bitcoinIcon" size={30} color="blue" />
-        <CustomIcon name="ethereumeIcon" size={30} color="blue" />
-        <CustomIcon name="rippleIcon" size={30} color="blue" />
-      </div>
+      {/* Menu */}
+      <Menu />
+      <Router>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/download" element={<DownloadPage />} />
+        </Routes>
+      </Router>
+
+      {/* Footer */}
+      <Footer />
     </>
   );
 }
