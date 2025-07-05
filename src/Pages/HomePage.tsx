@@ -8,8 +8,8 @@ import Widget3 from "../components/Widget3/Widget3";
 const HomePage = () => {
   return (
     <>
-      <Coins />
       <Hero />
+      <Coins />
       <PopularCoin />
       {/* Market Trend */}
       <Widget1 />

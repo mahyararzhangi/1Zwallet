@@ -10,35 +10,80 @@ import {
 } from "@mui/material";
 import { ButtonPrimary } from "../../Partials/ButtonPrimary";
 import SocialLinks from "./SocialLinks";
+import "./footer.css";
 
 const Footer = () => {
   return (
     <Stack>
-      <Box>
+      <Box mb={5}>
         <Grid container spacing={2}>
-          <Grid item md={4}>
-            <Typography variant="h6" gutterBottom>
+          <Grid
+            item
+            size={{ xs: 12, md: 4 }}
+            sx={{
+              width: { md: "344px" },
+              textAlign: { xs: "center", md: "flex-start" },
+            }}
+          >
+            <Typography variant="h6" textAlign={{ xs: "center", md: "left" }}>
               1z Wallet
             </Typography>
-            <Typography variant="body2" paragraph>
+            <Typography
+              variant="body2"
+              textAlign={{ xs: "center", md: "left" }}
+            >
               A specialized solution for managing Bitcoin assets, designed with
               a bank-like structure to provide secure storage, fast transfers,
               and reliable receipt.
             </Typography>
-            <Box display="flex" gap={1} mt={2}>
-              <TextField label="Your Name" variant="outlined" size="small" />
+            <Box
+              display="flex"
+              justifyContent={{ xs: "center", md: "left" }}
+              gap={1}
+              mt={2}
+            >
+              <TextField
+                variant="outlined"
+                size="small"
+                placeholder="Your Email"
+                sx={{
+                  "& .MuiOutlinedInput-root": {
+                    "& fieldset": {
+                      borderColor: "#E5F2EF54",
+                      borderRadius: "50px",
+                      height: "42px",
+                    },
+                    "&:hover fieldset": {
+                      borderColor: "#f2f2f2",
+                    },
+                    "&.Mui-focused fieldset": {
+                      borderColor: "blue",
+                    },
+                  },
+                  "& input::placeholder": {
+                    color: "#E5F2EF8A", // رنگ placeholder
+                  },
+                }}
+              />
               <ButtonPrimary
+                sx={{ lineHeight: "1.5" }}
                 text="Subscribe"
                 link="https://www.google.com"
-              ></ButtonPrimary>
+                height={22}
+              />
             </Box>
           </Grid>
 
-          <Grid item md={2}>
-            <Typography variant="h6" gutterBottom>
+          <Grid
+            item
+            size={{ xs: 12, md: 2 }}
+            justifyContent={{ xs: "center", md: "flex-start" }}
+            textAlign={{ xs: "center", md: "left" }}
+          >
+            <Typography variant="h6" fontSize="19px" mb={2}>
               Company
             </Typography>
-            <List dense disablePadding>
+            <List dense disablePadding className="footer-links">
               <ListItem component="a" href="/about" button>
                 <ListItemText primary="About" />
               </ListItem>
@@ -57,11 +102,15 @@ const Footer = () => {
             </List>
           </Grid>
 
-          <Grid item md={2}>
-            <Typography variant="h6" gutterBottom>
+          <Grid
+            item
+            size={{ xs: 12, md: 2 }}
+            textAlign={{ xs: "center", md: "left" }}
+          >
+            <Typography variant="h6" fontSize="19px" mb={2}>
               Products
             </Typography>
-            <List dense disablePadding>
+            <List dense disablePadding className="footer-links">
               <ListItem component="a" href="/buy" button>
                 <ListItemText primary="Buy" />
               </ListItem>
@@ -80,11 +129,15 @@ const Footer = () => {
             </List>
           </Grid>
 
-          <Grid item md={2}>
-            <Typography variant="h6" gutterBottom>
+          <Grid
+            item
+            size={{ xs: 12, md: 2 }}
+            textAlign={{ xs: "center", md: "left" }}
+          >
+            <Typography variant="h6" fontSize="19px" mb={2}>
               Learn
             </Typography>
-            <List dense disablePadding>
+            <List dense disablePadding className="footer-links">
               <ListItem component="a" href="/blog" button>
                 <ListItemText primary="Blog" />
               </ListItem>
@@ -103,11 +156,15 @@ const Footer = () => {
             </List>
           </Grid>
 
-          <Grid item md={2}>
-            <Typography variant="h6" gutterBottom>
+          <Grid
+            item
+            size={{ xs: 12, md: 2 }}
+            textAlign={{ xs: "center", md: "left" }}
+          >
+            <Typography variant="h6" fontSize="19px" mb={2}>
               Legal
             </Typography>
-            <List dense disablePadding>
+            <List dense disablePadding className="footer-links">
               <ListItem component="a" href="/aml-policy" button>
                 <ListItemText primary="AML Policy" />
               </ListItem>
@@ -124,10 +181,21 @@ const Footer = () => {
           </Grid>
         </Grid>
       </Box>
-      <Box>
-        <Stack flexDirection="row" justifyContent="space-between">
-          <Typography>2025 1z wallet. All rights reserved</Typography>
-          <Box>
+
+      {/* lower footer */}
+      <Box
+        borderTop="1px solid #fff"
+        pt={2}
+        textAlign={{ xs: "center", md: "left" }}
+      >
+        <Stack
+          flexDirection={{ xs: "column", md: "row" }}
+          justifyContent={{ xs: "center", md: "space-between" }}
+        >
+          <Typography order={{ xs: "2", md: "1" }} fontSize={"15px"}>
+            &#169; 2025 1z wallet. All rights reserved
+          </Typography>
+          <Box order={{ xs: "1", md: "2" }} display={"inline-block"}>
             <SocialLinks />
           </Box>
         </Stack>

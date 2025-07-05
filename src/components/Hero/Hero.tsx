@@ -1,60 +1,35 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { ButtonPrimary } from "../../Partials/ButtonPrimary";
+import Chart from "./chart";
+import "./Hero.css";
 
 const Hero = () => {
   return (
-    // <Stack
-    //   sx={{ flexDirection: "row", justifyContent: "space-between", mb: 5 }}
-    // >
-    //   <Stack>
-    //     <Typography>
-    //       <Typography variant="h3" fontWeight="900" display={"inline-block"}>
-    //         1Z Wallet
-    //       </Typography>
-    //       <Typography
-    //         variant="h3"
-    //         component="h3"
-    //         fontWeight="400"
-    //         display={"inline-block"}
-    //       >
-    //         , Fastest & secure crypto wallet
-    //       </Typography>
-    //     </Typography>
-    //     <Typography>
-    //       1Z Wallet , a specialized solution for managing Bitcoin assets,
-    //       designed with a bank-like structure to provide secure storage, fast
-    //       transfers, and reliable receipt.
-    //     </Typography>
-    //     <ButtonPrimary text="Download App" link="google.com" />
-    //   </Stack>
-    //   <Box>Chart</Box>
-    // </Stack>
-
-    <Grid container spacing={8}>
-      <Grid size={7}>
+    <Grid container spacing={8} sx={{ mb: 5 }}>
+      <Grid size={{ xs: 12, md: 7 }}>
         <Stack>
-          <Typography>
-            <Typography variant="h3" fontWeight="900" display={"inline-block"}>
+          <Typography
+            component="h3"
+            className="motto"
+            sx={{ mb: 3, lineHeight: "1" }}
+            fontSize={{ xs: "50px", md: "65px" }}
+          >
+            <Box fontWeight="bold" sx={{ display: "inline-block" }}>
               1Z Wallet
-            </Typography>
-            <Typography
-              variant="h3"
-              component="h3"
-              fontWeight="400"
-              display={"inline-block"}
-            >
-              , Fastest & secure crypto wallet
-            </Typography>
+            </Box>
+            , Fastest & secure crypto wallet
           </Typography>
-          <Typography>
+          <Typography sx={{ mb: 3, width: "65%" }}>
             1Z Wallet , a specialized solution for managing Bitcoin assets,
             designed with a bank-like structure to provide secure storage, fast
             transfers, and reliable receipt.
           </Typography>
-          <ButtonPrimary text="Download App" link="google.com" />
+          <ButtonPrimary text="Download App" link="google.com" width={229} />
         </Stack>
       </Grid>
-      <Grid size={5}>chart</Grid>
+      <Grid size={{ xs: 12, md: 5 }}>
+        <Chart />
+      </Grid>
     </Grid>
   );
 };

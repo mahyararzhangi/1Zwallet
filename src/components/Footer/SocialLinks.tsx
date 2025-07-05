@@ -7,7 +7,15 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const SocialLinks = () => {
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack
+      direction="row"
+      spacing={2}
+      sx={{
+        justifyContent: { xs: "center", md: "flex-start" },
+        alignItems: "center",
+        flexWrap: "wrap",
+      }}
+    >
       <Tooltip title="Facebook">
         <IconButton
           component="a"

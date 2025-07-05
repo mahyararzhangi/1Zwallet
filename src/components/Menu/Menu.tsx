@@ -7,24 +7,43 @@ export const Menu = () => {
   return (
     <Stack
       className="menu-wrapper"
-      sx={{ flexDirection: "row", justifyContent: "space-between" }}
+      sx={{
+        flexDirection: "row",
+        justifyContent: "space-between",
+        mb: 5,
+      }}
     >
       <Stack
         sx={{
           flexDirection: "row",
-          justifyContent: "space-between",
           alignItems: "center",
         }}
       >
         <CustomIcon name="siteLogo" size={54} color="blue" />
         <Typography
-          sx={{ fontSize: "24px", fontWeight: "900", paddingX: "15px" }}
+          sx={{
+            fontSize: {
+              xs: "20px",
+              sm: "24px",
+            },
+            fontWeight: 900,
+            paddingX: "15px",
+          }}
         >
           1z wallet
         </Typography>
       </Stack>
 
-      <Box>
+      <Stack
+        sx={{
+          gap: 1,
+          alignItems: {
+            xs: "flex-start",
+            sm: "center",
+          },
+          flexDirection: "row",
+        }}
+      >
         <ButtonSecondary
           text="Support"
           link="https://www.google.com"
@@ -33,11 +52,11 @@ export const Menu = () => {
         />
         <ButtonPrimary
           text="Download"
-          link="https://www.google.com"
-          width="100"
-          height="31"
+          link="/download"
+          width={100}
+          height={31}
         />
-      </Box>
+      </Stack>
     </Stack>
   );
 };

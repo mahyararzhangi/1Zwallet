@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0 5%;
   display: flex;
   place-items: center;
   min-width: 320px;
@@ -7,4 +8,3 @@ body {
   background: linear-gradient(to bottom right, #12056a, #09092e, #000617);
   color: #fff;
 }
-

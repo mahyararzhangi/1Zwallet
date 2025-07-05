@@ -1,0 +1,5 @@
+.motto {
+  background: -webkit-linear-gradient(45deg, #fff 60%, #4762aa 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

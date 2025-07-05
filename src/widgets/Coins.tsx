@@ -1,21 +1,35 @@
-import { Stack } from "@mui/material";
+import { Grid, Stack } from "@mui/material";
 import CustomIcon from "../icons/CustomIcon";
 export const Coins = () => {
+  const coins = [
+    "bitfinex",
+    "monero",
+    "tether",
+    "steemit",
+    "binance",
+    "ripple",
+    "coinbase",
+    "bitcoin",
+  ];
   return (
     <>
-      <Stack
-        sx={{ flexDirection: "row", justifyContent: "space-between", mb: 5 }}
-      >
-        <CustomIcon name="bitfinex" size={100} color="blue" />
-        <CustomIcon name="monero" size={100} color="blue" />
-        <CustomIcon name="tether" size={100} color="blue" />
-        <CustomIcon name="steemit" size={100} color="blue" />
-        <CustomIcon name="binance" size={100} color="blue" />
-        <CustomIcon name="ripple" size={100} color="blue" />
-        <CustomIcon name="coinbase" size={100} color="blue" />
-        <CustomIcon name="bitcoin" size={100} color="blue" />
-        <CustomIcon name="android" size={100} color="blue" />
-      </Stack>
+      <Grid container spacing={2} sx={{ mb: 10 }}>
+        {coins.map((name) => (
+          <Grid
+            item
+            key={name}
+            size={{ xs: 6, md: 1.5 }}
+            textAlign="center"
+            height="30px"
+          >
+            <CustomIcon name={name} size={100} />
+          </Grid>
+        ))}
+      </Grid>
+
+      {/* <Stack flexDirection={}>
+        <Box></Box>
+      </Stack> */}
     </>
   );
 };
