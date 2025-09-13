@@ -1,5 +1,3 @@
-// icons.jsx
-
 const icons = {
   siteLogo: (
     <svg

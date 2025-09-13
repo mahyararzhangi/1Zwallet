@@ -1,7 +1,6 @@
 import "./App.css";
-import HomePage from "../../Pages/HomePage";
+import { HomePage } from "../../Pages/HomePage";
 import DownloadPage from "../../Pages/DownloadPage";
-// import CustomIcon from "../../icons/CustomIcon";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Menu } from "../Menu/Menu";
 import Footer from "../Footer/Footer";
@@ -20,6 +19,7 @@ function App() {
 
       {/* Footer */}
       <Footer />
+      {/* <FetchApi /> */}
     </>
   );
 }

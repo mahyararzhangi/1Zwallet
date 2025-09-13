@@ -17,18 +17,6 @@ const Widget1 = () => {
           <BasicTable />
         </Grid>
       </Grid>
-      {/* <Stack
-        sx={{
-          flexDirection: "row",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Typography variant="h3">Market Trend</Typography>
-        <Box>
-          <BasicTable />
-        </Box>
-      </Stack> */}
     </>
   );
 };

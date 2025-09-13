@@ -46,7 +46,7 @@ export const Menu = () => {
       >
         <ButtonSecondary
           text="Support"
-          link="https://www.google.com"
+          link="/download"
           width="101"
           height="32"
         />

@@ -1,5 +1,7 @@
-import { Grid, Stack } from "@mui/material";
-import CustomIcon from "../icons/CustomIcon";
+// Coins.jsx
+import { Box } from "@mui/material";
+import icons from "../icons/icons.jsx";
+
 export const Coins = () => {
   const coins = [
     "bitfinex",
@@ -13,23 +15,21 @@ export const Coins = () => {
   ];
   return (
     <>
-      <Grid container spacing={2} sx={{ mb: 10 }}>
-        {coins.map((name) => (
-          <Grid
-            item
-            key={name}
-            size={{ xs: 6, md: 1.5 }}
-            textAlign="center"
-            height="30px"
-          >
-            <CustomIcon name={name} size={100} />
-          </Grid>
-        ))}
-      </Grid>
-
-      {/* <Stack flexDirection={}>
-        <Box></Box>
-      </Stack> */}
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "row",
+          flexWrap: "wrap",
+          justifyContent: { xs: "space-between", md: "space-between" },
+          alignItems: "center",
+          gap: 2,
+          mb: 5,
+        }}
+      >
+        {coins.map((item, index) => {
+          return <Box key={index}>{icons[item]}</Box>;
+        })}
+      </Box>
     </>
   );
 };

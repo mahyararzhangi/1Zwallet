@@ -3,3 +3,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+.cardGradient {
+  background-image: linear-gradient(90deg, #171d33, #171d3300);
+}

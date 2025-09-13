@@ -1,6 +1,6 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 import { ButtonPrimary } from "../../Partials/ButtonPrimary";
-import Chart from "./chart";
+import MainChart from "./MainChart";
 import "./Hero.css";
 
 const Hero = () => {
@@ -10,7 +10,7 @@ const Hero = () => {
         <Stack>
           <Typography
             component="h3"
-            className="motto"
+            className="textGradient"
             sx={{ mb: 3, lineHeight: "1" }}
             fontSize={{ xs: "50px", md: "65px" }}
           >
@@ -24,11 +24,11 @@ const Hero = () => {
             designed with a bank-like structure to provide secure storage, fast
             transfers, and reliable receipt.
           </Typography>
-          <ButtonPrimary text="Download App" link="google.com" width={229} />
+          <ButtonPrimary text="Download App" link="/download" width={229} />
         </Stack>
       </Grid>
       <Grid size={{ xs: 12, md: 5 }}>
-        <Chart />
+        <MainChart />
       </Grid>
     </Grid>
   );

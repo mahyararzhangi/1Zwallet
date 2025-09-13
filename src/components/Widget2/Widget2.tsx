@@ -8,7 +8,7 @@ const Widget2 = () => {
         Simple steps to get started
       </Typography>
 
-      <Grid container spacing={2} sx={{ mb: 10 }}>
+      <Grid container spacing={2} mb={{ xs: "15em", md: "10em" }}>
         <Grid item size={{ xs: 12, md: 6 }}>
           <Stack flexDirection="row">
             <Typography
@@ -121,7 +121,7 @@ const Widget2 = () => {
           </Stack>
         </Grid>
         <Grid item size={{ xs: 12, md: 6 }} sx={{ mt: "auto" }}>
-          <ButtonPrimary text="Get Started" link="google.com" />
+          <ButtonPrimary text="Get Started" link="" />
         </Grid>
       </Grid>
     </>
